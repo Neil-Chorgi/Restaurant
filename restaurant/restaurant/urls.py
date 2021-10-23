@@ -18,5 +18,6 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #redirects /hotel to urls.py in the hotel(app)
     path('hotel/', include('hotel.urls')),
 ]
