@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'restaurant.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'polls',
+        'NAME': 'hotel',
         'USER': 'postgres',
         'PASSWORD': 'NIvi2008',
         'HOST': 'localhost',
