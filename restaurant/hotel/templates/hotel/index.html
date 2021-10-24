@@ -1,7 +1,29 @@
 {% if menu_list %}
-    <ul>
+    <ul style = "list-style: none;">
+    <center><h3>Dish   Cost(£)</h3></center>
+    <center><h3>Starters</h3></center>
     {% for item in menu_list %}
-        <li><a href="/hotel/{{ item.id }}/">{{item.dish_text}}</a></li>
+        {%if item.type_of_dish == 'STARTER'%}
+            <center><li><a href="/hotel/{{ item.id }}/">{{item.dish_text}} | £{{item.price}}</a></li></center>
+        {%endif%}
+    {% endfor %}
+    <center><h3>Main Dishes</h3></center>
+    {% for item in menu_list %}
+        {%if item.type_of_dish == 'MAIN'%}
+            <center><li><a href="/hotel/{{ item.id }}/">{{item.dish_text}} | £{{item.price}}</a></li></center>
+        {%endif%}
+    {% endfor %}
+    <center><h3>Dessert</h3></center>
+    {% for item in menu_list %}
+        {%if item.type_of_dish == 'DESSERT'%}
+            <center><li><a href="/hotel/{{ item.id }}/">{{item.dish_text}} | £{{item.price}}</a></li></center>
+        {%endif%}
+    {% endfor %}
+    <center><h3>Drinks</h3></center>
+    {% for item in menu_list %}
+        {%if item.type_of_dish == 'DRINK'%}
+            <center><li><a href="/hotel/{{ item.id }}/">{{item.dish_text}} | £{{item.price}}</a></li></center>
+        {%endif%}
     {% endfor %}
     </ul>
 {% else %}
