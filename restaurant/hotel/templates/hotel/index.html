@@ -1,6 +1,10 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'hotel/style.css' %}">
+
 {% if menu_list %}
     <ul style = "list-style: none;">
-    <center><h3>Dish   Cost(£)</h3></center>
+    <center><h1>Menu</h1></center>
     <center><h3>Starters</h3></center>
     {% for item in menu_list %}
         {%if item.type_of_dish == 'STARTER'%}
