@@ -24,3 +24,8 @@ def menu(request, dish_id):
     d = menu_list[dish_id - 1]
     output = d.dish_text+", "+d.description_text+". Price: £"+str(d.price)
     return HttpResponse(output)
+'''
+def homepage(request):
+    context = {'foo':'bar'}
+    return render(request, 'templates/hotel/homepage.html', context) 
+'''
