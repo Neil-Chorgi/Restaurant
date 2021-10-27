@@ -21,7 +21,7 @@ class Dish(models.Model):
 class Order(models.Model):
     order_dish = models.ForeignKey(Dish,on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default = 1)
-    extra_notes = models.CharField(max_length = 1000, default = " ")
+    extra_notes = models.CharField(max_length = 1000, default = "None")
     def __str__(self):    
         return 'Dish: {}, quantity: {}, extra notes: {}'.format(self.order_dish, self.quantity, self.extra_notes)
     

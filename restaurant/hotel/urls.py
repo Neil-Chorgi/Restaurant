@@ -7,4 +7,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     #if the path is ' ' then run function name 'index'
     path('<int:dish_id>/',views.menu, name = 'menu'),
+    
+    path('order/', views.order_page,name = 'order_page'),
+    
+    path('order/<int:order_id>/',views.delete,name = 'delete'),
 ]

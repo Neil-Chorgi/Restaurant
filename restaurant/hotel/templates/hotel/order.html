@@ -1,0 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'hotel/orderstyle.css' %}">
+
+
+{% if order_list %}
+    <ul style = "list-style: none;">
+    <center><h1>Orders</h1></center>
+    {% for item in order_list %}
+        <center><li>{{item.order_dish}}, quantity: {{item.quantity}} extra notes: {{item.extra_notes}} <a href='{{item.id}}/'><button>Cancel order</button></a></li></center>
+        <center><br></br> </center>
+    {% endfor %}
+
+    </ul>
+{% else %}
+    <p>No dishes are available.</p>
+{% endif %}
